@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import routes from './routes'
+import VueMaterial from 'vue-material'
+
+Vue.use(VueMaterial);
 
 const app = new Vue({
   el: '#app',
@@ -11,7 +14,7 @@ const app = new Vue({
       const matchingView = routes[this.currentRoute]
       return matchingView
         ? require('./pages/' + matchingView + '.vue')
-        : require('./pages/404.vue')
+        : require('./pages/Home.vue')
     }
   },
   render (h) {
